@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "strictPropertyInitialization": false,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -11,10 +12,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "baseUrl": "./docs",
+    "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "marked"
     ],
     "paths": {
       "@/*": [
@@ -36,6 +38,6 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "docs/node_modules"
+    "node_modules"
   ]
 }
