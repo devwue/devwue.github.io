@@ -2,6 +2,9 @@ module.exports = {
     chainWebpack: config => {
         config.module.rules.delete('eslint');
     },
-    publicPath: process.env.NODE_ENV === 'production' ? '/' : '/docs',
-    outputDir: 'docs'
+    publicPath: '/',
+    outputDir: 'docs',
+    devServer: {
+        port: process.env.VUE_APP_PORT || 8080
+    }
 }

@@ -39,4 +39,6 @@ ul {list-style: none}
 }
 #foobar { clear: both; border-top: 1px solid #ccc; overflow: hidden; }
 #foobar p { margin: 15px 0 }
+.markdown-body { text-align: left; }
+@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css";
 </style>

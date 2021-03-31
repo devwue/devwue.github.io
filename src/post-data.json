@@ -10,5 +10,21 @@
   {
     "Name" : "Laravel 사용자 로깅 추가",
     "Page" : "/laravel/logging.md"
+  },
+  {
+    "Name": "Netflix 에서 뭘 만들었다고? Feign Client",
+    "Page" : "/Springboot/feign.md"
+  },
+  {
+    "Name": "Java Http Client",
+    "Page": "/java/HttpClient.md"
+  },
+  {
+    "Name": "Redis 에서 제공하는 Sorted Sets 자료구조 어디에 사용할까?",
+    "Page" : "/redis/Ranking.md"
+  },
+  {
+    "Name": "대용량 처리에 적합한 기술? - Apache Kafka",
+    "Page" : "/etc/kafka.md"
   }
 ]

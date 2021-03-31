@@ -16,7 +16,9 @@ export default class Post extends Vue {
 
   created (): void {
     const postName = this.$route.params.postName
-    const url = this.baseUri + postName;
+    const host = process.env.VUE_APP_BASE
+    const docsUrl = process.env.VUE_APP_DOCS
+    const url = host + docsUrl + '/' + postName
     console.log('created', url)
     this.$http.get(url)
         .then((response) => {
@@ -25,7 +27,3 @@ export default class Post extends Vue {
   }
 }
 </script>
-<style scoped>
-* { text-align: left; }
-@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css";
-</style>
