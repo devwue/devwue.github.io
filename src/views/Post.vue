@@ -12,10 +12,13 @@ import marked from "marked"
 
 export default class Post extends Vue {
   public contents: string = ''
+  private baseUri: string = 'https://devwue.github.io/docs/'
 
   created (): void {
     const postName = this.$route.params.postName
-    this.$http.get('/docs/' + postName)
+    const url = this.baseUri + postName;
+    console.log('created', url)
+    this.$http.get(url)
         .then((response) => {
           this.contents = marked(response.data)
         });

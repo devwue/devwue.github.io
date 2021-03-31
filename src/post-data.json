@@ -2,5 +2,13 @@
   {
     "Name": "Homebrew 이란? 사용법을 알아보자",
     "Page": "/etc/brew.md"
+  },
+  {
+    "Name": "Spring Boot @Transactional 전파 레벨 ",
+    "Page": "/Springboot/Transactional.md"
+  },
+  {
+    "Name" : "Laravel 사용자 로깅 추가",
+    "Page" : "/laravel/logging.md"
   }
 ]

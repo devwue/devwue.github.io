@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && cd docs && cp index.html 404.html",
+    "prod" : "serve -s docs -l 8080",
     "test:unit": "node_modules/.bin/vue-cli-service test:unit"
   },
   "dependencies": {
