@@ -5,7 +5,7 @@
   },
   {
     "Name": "Spring Boot @Transactional 전파 레벨 ",
-    "Page": "/Springboot/Transactional.md"
+    "Page": "/SpringBoot/Transactional.md"
   },
   {
     "Name" : "Laravel 사용자 로깅 추가",
@@ -13,7 +13,7 @@
   },
   {
     "Name": "Netflix 에서 뭘 만들었다고? Feign Client",
-    "Page" : "/Springboot/feign.md"
+    "Page" : "/SpringBoot/feign.md"
   },
   {
     "Name": "Java Http Client",
