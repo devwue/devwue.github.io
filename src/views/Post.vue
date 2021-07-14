@@ -7,12 +7,20 @@
 <script lang="ts">
 /* tslint:disabled */
 import { Options, PropOptions, Vue } from 'vue-class-component'
+import { useRoute } from 'vue-router'
 import marked from "marked"
 
 
 export default class Post extends Vue {
   public contents: string = ''
-  private baseUri: string = 'https://devwue.github.io/docs/'
+
+  public getView() : any {
+    return useRoute().name;
+  }
+
+  private wrLog(message: string) : void {
+    console.log(this.getView() + '=> ' + message);
+  }
 
   created (): void {
     const postName = this.$route.params.postName
@@ -23,7 +31,12 @@ export default class Post extends Vue {
     this.$http.get(url)
         .then((response) => {
           this.contents = marked(response.data)
-        });
+        })
+        .catch((error) => {
+          this.wrLog(error.response);
+          console.log(error)
+        })
+    console.log(this.getView())
   }
 }
 </script>

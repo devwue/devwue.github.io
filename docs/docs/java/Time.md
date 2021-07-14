@@ -15,11 +15,13 @@ LocalDateTime.of(2021,03,21, 10, 10, 10);
 LocalDateTime.now().format(DateTimeFormatter.ISO_DATE);
 LocalDateTime.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분 ss초"));
 ```
-||상수|출력예|비고||
-|ISO_DATE_TIME|2021-03-21T00:00:00.0| ||
-|ISO_LOCAL_DATE|2021-03-21|ISO_DATE||
-|ISO_LOCAL_TIME|00:00:00.1|ISO_TIMEE||
-|ISO_LOCAL_DATE_TIME|2021-03-21T00:00:00.0|||
+
+상수 | 출력예 | 비고
+---- | ------ | ----
+ISO_DATE_TIME | 2021-03-21T00:00:00.0 
+ISO_LOCAL_DATE | 2021-03-21 | ISO_DATE  
+ISO_LOCAL_TIME | 00:00:00.1 | ISO_TIMEE 
+ISO_LOCAL_DATE_TIME | 2021-03-21T00:00:00.0 
 
 
 
