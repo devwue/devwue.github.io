@@ -3,7 +3,7 @@
 > 설정: package.json
 ```bash
 # npm run serve
-# npm build
+# npm run build
 ```
 
 ## setting

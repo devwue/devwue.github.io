@@ -20,6 +20,7 @@ public class AsyncTaskDecorator implements TaskDecorator {
     }
 }
 ````
+
 * TaskExcutor를 통한 전달
 ```java
 @Bean
@@ -31,7 +32,9 @@ public TaskExecutor taskExecutor() {
     return taskExecutor;
 }
 ```
+
 * MDC trackingId 설정
+
 ```java
 import java.util.UUID;
 
