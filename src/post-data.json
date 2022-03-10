@@ -50,5 +50,13 @@
   {
     "Name": "SpringBoot - Tomcat Thread Pool",
     "Page": "/SpringBoot/Tomcat.md"
+  },
+  {
+    "Name": "Java 8 to 11",
+    "Page": "/java/Java8To11.md"
+  },
+  {
+    "Name": "Java JVM",
+    "Page": "/java/JVM.md"
   }
 ]
