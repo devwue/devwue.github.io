@@ -13,3 +13,11 @@
         private String memberName;
     }
     ```
+ 
+* JSON 데이터 맵핑을 하지 못해 에러가 발생 될때
+  ````java
+  ObjectMapper mapper = new ObjectMapper();
+  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+  ````
+  
+* Google Gson 도 있지만 한번 생성후 사용할땐 Jackson 이 훨씬 빨름

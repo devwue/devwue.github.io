@@ -15,10 +15,15 @@ feign:
 ````groovy
 implement 'org.apache.httpcomponents:httpclient:version'
 implement 'io.github.openfeign:feign-okhttp:version'
+implement 'io.github.openfeign:feign-httpclient'
 ````
 
 ```yaml
 feign:
+  httpclient:
+    enabled: false # disabled httpclient
+  okhttp:
+    enabled: true # enable okhttp
   client:
     config:
       default:
@@ -41,10 +46,20 @@ feign:
       enabled: true
 ```
 ## configuration 
-1. 모든 요청에 헤더 붙이기  
+1. 모든 요청에 헤더 붙이기
+
 ````java
-@Bean
-public RequestInterceptor reqeustInterceptor() {
-    return reqeustTemplate -> requestTemplate.header("Authorization", "key", "value");
+public class FeignCustomConfig {
+    @Bean
+    public RequestInterceptor reqeustInterceptor() {
+        return reqeustTemplate -> requestTemplate
+                .header("Authorization", "key", "value")
+                .query("trackId", UUID.randomUUID().toString());
+    }
+}
+@FeignClient(name="myClient", url = "${my.api.url}")
+public interface MyFeignClient {
+    @RequestMapping(method = RequestMethod.GET, value = "/test/uri/{testId}")
+    List<String> getSearchLogs(@PathVariable("testId") Integer testId);
 }
 ````
