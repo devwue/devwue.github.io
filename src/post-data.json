@@ -64,7 +64,47 @@
     "Page": "/SpringBoot/RestTemplate.md"
   },
   {
-    "Name": "Junit4 테스트 Mock",
+    "Name": "Java - Junit 테스트 Mock",
     "Page": "/SpringBoot/Junit.md"
+  },
+  {
+    "Name": "Java - Annotation",
+    "Page": "/Java/Annotation.md"
+  },
+  {
+    "Name": "Java - Map, HashMap, TreeMap, LinkedHashMap",
+    "Page": "/Java/Map.md"
+  },
+  {
+    "Name": "Java - Queue / Stack",
+    "Page": "/Java/Queue.md"
+  },
+  {
+    "Name": "Java - Stream",
+    "Page": "/Java/Stream.md"
+  },
+  {
+    "Name": "프로그래머스 - 완주하지 못한 선수",
+    "Page": "/Coding/Marathon.md"
+  },
+  {
+    "Name": "프로그래머스 - 전화번호",
+    "Page": "/Coding/PhoneBook.md"
+  },
+  {
+    "Name": "프로그래머스 - 위장",
+    "Page": "/Coding/Spy.md"
+  },
+  {
+    "Name": "프로그래머스 - 베스트 앨범",
+    "Page": "/Coding/BestAlbum.md"
+  },
+  {
+    "Name": "프로그래머스 - 기능개발",
+    "Page": "/Coding/Works.md"
+  },
+  {
+    "Name": "프로그래머스 - 프린터",
+    "Page": "/Coding/Printer.md"
   }
 ]

@@ -17,10 +17,13 @@
 <br>
 
 ### 나의 언어
-> 언어는 도구일뿐 생각은 언어에 얽메이지 말자
-* PHP  `Laravel, CodeIgniter, Slim`
+> 언어는 도구일뿐 생각은 언어에 얽매이지 말자
 * Java  `Spring Boot`
+* PHP  `Laravel, CodeIgniter, Slim`
+* 관심 추가 중
+  * Kotlin, Swift
   
 - 좋아하는 것
-  * docker, brew, bash
+  * docker, aws
+  * brew, bash
   * 특히 노는걸 좋아함
