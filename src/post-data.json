@@ -48,6 +48,14 @@
     "Page": "/SpringBoot/TaskDecorator.md"
   },
   {
+    "Name": "JPA - Specification 사용하기",
+    "Page": "/SpringBoot/Query/Specification.md"
+  },
+  {
+    "Name": "JPA - Querydsl 사용하기",
+    "Page": "/SpringBoot/Query/QueryDsl.md"
+  },
+  {
     "Name": "SpringBoot - Tomcat Thread Pool",
     "Page": "/SpringBoot/Tomcat.md"
   },
