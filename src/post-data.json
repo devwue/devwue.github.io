@@ -69,19 +69,19 @@
   },
   {
     "Name": "Java - Annotation",
-    "Page": "/Java/Annotation.md"
+    "Page": "/java/Annotation.md"
   },
   {
     "Name": "Java - Map, HashMap, TreeMap, LinkedHashMap",
-    "Page": "/Java/Map.md"
+    "Page": "/java/Map.md"
   },
   {
     "Name": "Java - Queue / Stack",
-    "Page": "/Java/Queue.md"
+    "Page": "/java/Queue.md"
   },
   {
     "Name": "Java - Stream",
-    "Page": "/Java/Stream.md"
+    "Page": "/java/Stream.md"
   },
   {
     "Name": "프로그래머스 - 완주하지 못한 선수",
