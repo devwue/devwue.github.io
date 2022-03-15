@@ -4,8 +4,12 @@
     "Page": "/etc/brew.md"
   },
   {
+    "Name": "AWS Elastic Beanstalk 사용하기",
+    "Page": "/aws/Beanstalk.md"
+  },
+  {
     "Name": "Spring Boot @Transactional 전파 레벨 ",
-    "Page": "/SpringBoot/Transactional.md"
+    "Page": "/SpringBoot/Query/Transactional.md"
   },
   {
     "Name" : "Laravel 사용자 로깅 추가",
@@ -46,6 +50,14 @@
   {
     "Name" : "SpringBoot 동기, 비동기 처리시 context 유지하고 로깅",
     "Page": "/SpringBoot/TaskDecorator.md"
+  },
+  {
+    "Name" : "SpringBoot JPA 다중 데이터 소스 설정 (Master / Slave)",
+    "Page" : "/SpringBoot/Query/JpaMasterSlave.md"
+  },
+  {
+    "Name" : "SpringBoot Async 비동기 설정",
+    "Page" : "/SpringBoot/Async.md"
   },
   {
     "Name": "JPA - Specification 사용하기",

@@ -26,16 +26,49 @@ Tomcat 3.2 이전에서는, 요청이 들어올 때 마다 Servlet을 실행할 
 * TEST 방법
    * Controller 에서 테스트
     ```java
-    @GetMapping("/threadCall")
-    public ResponseEntity<Void> threadCall() {
-        RestTemplate restTemplate = new RestTemplate();
-        for (int i = 0; i < 5; i++) {
-            Thread thread = new Thread(() -> {
-                String result = restTemplate.getForObject("http://localhost:8080/", String.class);
-                log.info("response - {}",result);
-            });
-            thread.start();
+    public class TestController {
+        @GetMapping("/block") 
+        public String slow(Integer idx) {
+            Thread.sleep(2000L);
+            return String.valueOf(idx);
         }
-        return ResponseEntity.ok().build();
+  
+        @GetMapping("/threadCall")
+        public ResponseEntity<Void> threadCall() {
+            RestTemplate restTemplate = new RestTemplate();
+            for (int i = 0; i < 5; i++) {
+                Thread thread = new Thread(() -> {
+                    String result = restTemplate.getForObject("http://localhost:8080/block?idx=" + i, String.class);
+                    log.info("response - {}",result);
+                });
+                thread.start();
+            }
+            return ResponseEntity.ok().build();
+        }
+  
+        @GetMapping("/deferred") // non-blocking with deferred
+        public DeferredResult<String> defer() {
+            final DeferredResult<String> deferredResult = new DeferredResult<>();
+            new Thread(() -> {
+                try {
+                    deferredResult.setResult("Success");
+                } catch (Exception e) {
+                    throw e;
+                }
+            }).start();
+            return deferredResult;
+        }
+
+        @GetMapping("/future") // non-blocking with CompletableFuture
+        public CompletableFuture<String> future() {
+            return CompletableFuture.supplyAsync(() -> {
+                return "hello";
+            }).thenApplyAsync(hello -> {
+                return hello + "world";
+            }).thenApplyAsync(result -> {
+                log.debug("final: {}", result);
+                return result;
+            });
+        }
     }
     ```
