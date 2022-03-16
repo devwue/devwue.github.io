@@ -126,5 +126,13 @@
   {
     "Name": "프로그래머스 - 프린터",
     "Page": "/Coding/Printer.md"
+  },
+  {
+    "Name": "SpringBoot, Micrometer 로 모니터링",
+    "Page": "/SpringBoot/Micrometer.md"
+  },
+  {
+    "Name": "Spring Cloud Circuit Breaker",
+    "Page": "/SpringBoot/CircuitBreaker.md"
   }
 ]
