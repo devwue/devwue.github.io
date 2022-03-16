@@ -6,7 +6,7 @@
 ### 페이지 구성
 * Vue.js + marked.js 
   > vue-cli 를 이용해 vue project 생성후 vue3 + typescript <br>
-  [Github](http://github.com/devwue.github.io) - [Source.zip](https://github.com/devwue/devwue.github.io/archive/refs/heads/master.zip)
+  [Github](http://github.com/devwue/devwue.github.io) - [Source.zip](https://github.com/devwue/devwue.github.io/archive/refs/heads/master.zip)
 * 동기 / 목적
   > 권태기를 극복 하고자 남들 하는걸 해보기로 결심 <br>
   > 기록 (삽질 / 공부 / 작업 / 기억)

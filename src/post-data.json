@@ -134,5 +134,9 @@
   {
     "Name": "Spring Cloud Circuit Breaker",
     "Page": "/SpringBoot/CircuitBreaker.md"
+  },
+  {
+    "Name": "Vue CLI로 Sitemap 만들기",
+    "Page": "/Javascript/vue-sitemap.md"
   }
 ]

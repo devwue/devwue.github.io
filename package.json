@@ -5,8 +5,9 @@
   "scripts": {
     "serve": "cp -f .env.local .env && vue-cli-service serve",
     "build": "cp -f .env.production .env && vue-cli-service build && cd docs && cp index.html 404.html",
-    "prod" : "serve -s docs -l 8080",
-    "test:unit": "node_modules/.bin/vue-cli-service test:unit"
+    "test:unit": "node_modules/.bin/vue-cli-service test:unit",
+    "prod": "serve -s docs -l 8080",
+    "sitemap": "vue-cli-service sitemap"
   },
   "dependencies": {
     "@types/marked": "^2.0.0",
@@ -29,6 +30,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "typescript": "~4.1.5",
+    "vue-cli-plugin-sitemap": "~2.3.0",
     "vue-jest": "^5.0.0-0"
   },
   "browserslist": [
