@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/marked": "^2.0.0",
     "axios": "^0.21.1",
-    "marked": "^2.0.1",
+    "marked": "^4.0.10",
     "vue": "^3.0.0",
     "vue-axios": "^3.2.4",
     "vue-class-component": "^8.0.0-0",
