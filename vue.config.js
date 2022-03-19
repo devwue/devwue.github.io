@@ -10,7 +10,7 @@ module.exports = {
     pluginOptions: {
         sitemap: {
             urls: [
-                'https://devwue.github.io',
+                'https://devwue.github.io/home',
                 'https://devwue.github.io/about',
             ]
         }
