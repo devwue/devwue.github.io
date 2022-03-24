@@ -22,7 +22,7 @@ export default {
 		})
 
 		const filteredTitles = computed(() => {
-			return titles.filter(s => s.Name.toLowerCase().includes(props.query.toLowerCase()))
+			return titles.filter(s => s.Tags.toLowerCase().includes(props.query.toLowerCase()))
 		})
 
 		return {

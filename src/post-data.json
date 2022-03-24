@@ -1,142 +1,192 @@
 [
   {
     "Name": "Homebrew 이란? 사용법을 알아보자",
-    "Page": "/etc/brew.md"
+    "Page": "/etc/brew.md",
+    "Tags": "homebrew, macos, developer"
   },
   {
     "Name": "AWS Elastic Beanstalk 사용하기",
-    "Page": "/aws/Beanstalk.md"
+    "Page": "/aws/Beanstalk.md",
+    "Tags": "aws beanstalk, aws deploy"
   },
   {
     "Name": "Spring Boot @Transactional 전파 레벨 ",
-    "Page": "/SpringBoot/Query/Transactional.md"
+    "Page": "/SpringBoot/Query/Transactional.md",
+    "Tags": "spring boot, query, transaction"
   },
   {
     "Name" : "Laravel 사용자 로깅 추가",
-    "Page" : "/laravel/logging.md"
+    "Page" : "/laravel/logging.md",
+    "Tags": "php, laravel, 로깅, json, 커스텀"
   },
   {
     "Name": "Netflix 에서 뭘 만들었다고? Feign Client",
-    "Page" : "/SpringBoot/feign.md"
+    "Page" : "/SpringBoot/feign.md",
+    "Tags": "netflix, spring boot, feign client, 스프링 부트"
   },
   {
     "Name": "Java Http Client",
-    "Page": "/java/HttpClient.md"
+    "Page": "/java/HttpClient.md",
+    "Tags": "java, http client"
   },
   {
     "Name": "Redis 에서 제공하는 Sorted Sets 자료구조 어디에 사용할까?",
-    "Page" : "/redis/Ranking.md"
+    "Page" : "/redis/Ranking.md",
+    "Tags": "redis, ranking, cache, sorted sets"
   },
   {
     "Name": "대용량 처리에 적합한 기술? - Apache Kafka",
-    "Page" : "/etc/kafka.md"
+    "Page" : "/etc/kafka.md",
+    "Tags": "spring boot, apache kafka, 대용량, 카프카, 대용량"
   },
   {
     "Name": "라라벨 리스너 - SQL 실행 로그",
-    "Page" : "/laravel/logging-sql.md"
+    "Page" : "/laravel/logging-sql.md",
+    "Tags": "php, laravel, logging, 라라벨, 로깅, sql"
   },
   {
     "Name": "Java - 시간, 날짜",
-    "Page" : "/java/Time.md"
+    "Page" : "/java/Time.md",
+    "Tags": "java, time, 시간, UTC, timezone"
   },
   {
     "Name": "SpringBoot - Jackson Json 라이브러리",
-    "Page" : "/SpringBoot/ObjectMapper.md"
+    "Page" : "/SpringBoot/ObjectMapper.md",
+    "Tags": "spring boot, jackson, json, object mapper, gson"
   },
   {
     "Name": "Java / SpringBoot - Assertion Exception",
-    "Page" : "/SpringBoot/Assert.md"
+    "Page" : "/SpringBoot/Assert.md",
+    "Tags": "spring boot, assertion, 스프링부트, 예외"
   },
   {
     "Name" : "SpringBoot 동기, 비동기 처리시 context 유지하고 로깅",
-    "Page": "/SpringBoot/TaskDecorator.md"
+    "Page": "/SpringBoot/TaskDecorator.md",
+    "Tags": "spring boot, logging, decorator, mdc, 스프링 부트, 로깅"
   },
   {
     "Name" : "SpringBoot JPA 다중 데이터 소스 설정 (Master / Slave)",
-    "Page" : "/SpringBoot/Query/JpaMasterSlave.md"
+    "Page" : "/SpringBoot/Query/JpaMasterSlave.md",
+    "Tags": "spring boot, jpa, configuration, 스프링 부트"
   },
   {
     "Name" : "SpringBoot Async 비동기 설정",
-    "Page" : "/SpringBoot/Async.md"
+    "Page" : "/SpringBoot/Async.md",
+    "Tags": "spring boot, async, task executor, 스프링 부트"
   },
   {
     "Name": "JPA - Specification 사용하기",
-    "Page": "/SpringBoot/Query/Specification.md"
+    "Page": "/SpringBoot/Query/Specification.md",
+    "Tags": "jpa, spring boot, specification, 스프링부트, query"
   },
   {
     "Name": "JPA - Querydsl 사용하기",
-    "Page": "/SpringBoot/Query/QueryDsl.md"
+    "Page": "/SpringBoot/Query/QueryDsl.md",
+    "Tags": "jpa, spring, spring boot, querydsl, 스프링"
   },
   {
     "Name": "SpringBoot - Tomcat Thread Pool",
-    "Page": "/SpringBoot/Tomcat.md"
+    "Page": "/SpringBoot/Tomcat.md",
+    "Tags": "java, spring, springboot, tomcat, 스프링, 톰켓"
   },
   {
     "Name": "Java 8 to 11",
-    "Page": "/java/Java8To11.md"
+    "Page": "/java/Java8To11.md",
+    "Tags": "java, migration"
   },
   {
     "Name": "Java JVM",
-    "Page": "/java/JVM.md"
+    "Page": "/java/JVM.md",
+    "Tags": "java, jvm"
   },
   {
     "Name": "RestTemplate - Connection Pool",
-    "Page": "/SpringBoot/RestTemplate.md"
+    "Page": "/SpringBoot/RestTemplate.md",
+    "Tags": "java, spring, spring boot, resttemplate, connection pool, 스프링, 커넥션 풀링"
   },
   {
     "Name": "Java - Junit 테스트 Mock",
-    "Page": "/SpringBoot/Junit.md"
+    "Page": "/SpringBoot/Junit.md",
+    "Tags": "java, junit, test, spring, 스프링"
   },
   {
     "Name": "Java - Annotation",
-    "Page": "/java/Annotation.md"
+    "Page": "/java/Annotation.md",
+    "Tags": "java, annotation"
   },
   {
     "Name": "Java - Map, HashMap, TreeMap, LinkedHashMap",
-    "Page": "/java/Map.md"
+    "Page": "/java/Map.md",
+    "Tags": "java, map, hashmap, treemap, linkedhashmap"
   },
   {
     "Name": "Java - Queue / Stack",
-    "Page": "/java/Queue.md"
+    "Page": "/java/Queue.md",
+    "Tags": "java, queue, stack"
   },
   {
     "Name": "Java - Stream",
-    "Page": "/java/Stream.md"
+    "Page": "/java/Stream.md",
+    "Tags": "java, stream"
   },
   {
     "Name": "프로그래머스 - 완주하지 못한 선수",
-    "Page": "/Coding/Marathon.md"
+    "Page": "/Coding/Marathon.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "프로그래머스 - 전화번호",
-    "Page": "/Coding/PhoneBook.md"
+    "Page": "/Coding/PhoneBook.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "프로그래머스 - 위장",
-    "Page": "/Coding/Spy.md"
+    "Page": "/Coding/Spy.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "프로그래머스 - 베스트 앨범",
-    "Page": "/Coding/BestAlbum.md"
+    "Page": "/Coding/BestAlbum.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "프로그래머스 - 기능개발",
-    "Page": "/Coding/Works.md"
+    "Page": "/Coding/Works.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "프로그래머스 - 프린터",
-    "Page": "/Coding/Printer.md"
+    "Page": "/Coding/Printer.md",
+    "Tags": "coding, 이직, 공부, 알고리즘, study, 스터디, programers, 프로그래머스"
   },
   {
     "Name": "SpringBoot, Micrometer 로 모니터링",
-    "Page": "/SpringBoot/Micrometer.md"
+    "Page": "/SpringBoot/Micrometer.md",
+    "Tags": "java, spring, springboot, 스프링, 모니터링, Micrometer, monitor"
   },
   {
     "Name": "Spring Cloud Circuit Breaker",
-    "Page": "/SpringBoot/CircuitBreaker.md"
+    "Page": "/SpringBoot/CircuitBreaker.md",
+    "Tags": "java, spring, springboot, 스프링"
   },
   {
     "Name": "Vue CLI로 Sitemap 만들기",
-    "Page": "/Javascript/vue-sitemap.md"
+    "Page": "/Javascript/vue-sitemap.md",
+    "Tags": "vue, sitemap"
+  },
+  {
+    "Name": "알고리즘, 배열 순회",
+    "Page": "/algorithm/CircleShift.md",
+    "Tags": "algorithm, 알고리즘, 배열 순회"
+  },
+  {
+    "Name": "Apple M1 맥북에서 Docker 사용하기",
+    "Page": "/etc/RancherDesktop.md",
+    "Tags": "apple, mac,m1 macbook, docker, rancher, developer, dev, container, Kubeneretes, rancher"
+  },
+  {
+    "Name": "Laravel - Local 환경 구축",
+    "Page": "/laravel/local.md",
+    "Tags": "php, laravel, test"
   }
 ]
