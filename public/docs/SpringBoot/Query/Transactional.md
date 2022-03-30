@@ -43,3 +43,46 @@ public void bizAction() throw Exception {
 // 특정 예외 발생시 롤백 처리 안하게
 @Transactional(noRollbackFor = {IgnoreRollbackException.class})
 ```
+
+### JPA 사용시 Lock 사용
+> 비관적 락: 데이터베이스 리소스에 다른 사람이 접근조차 하지 못하도록 Lock을 걸고 작업을 하는것
+* exclusive lock (beta lock) 
+  * 읽기 쓰기 모두 불가능 `SELECT ... FOR UPDATE`
+* shared lock
+  * 읽기는 가능하지만 쓰기는 불가능
+  
+#### JPA Lock 옵션
+1. PESSIMISTIC_READ
+   * 타 트랜잭션에서 읽기는 가능하지만 쓰기는 불가능
+2. PESSIMISTIC_WRITE
+   * 타 트랜잭션에서 읽기 쓰기 모두 불가능
+3. PESSIMISTIC_FORCE_INCREMENT
+   * 타 트랜잭션에서 읽기 쓰기 모두 불가능
+   * 버저닝 처리
+
+#### JPA Lock 특징, 예외
+1. PessimisticLockException : Lock 취득을 못함
+2. LockTimeoutException : Lock 취득을 시간내에 하지 못함
+3. PersistanceException : 값을 변경할 할때 발생 
+   * NoResultException, NoUniqueResultException, LockTimeoutException, QueryTimeoudException
+   * 롤백 처리됨.
+
+#### Example
+```java
+public interface MyRepository extends JpaRepository<My, Long> {
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    Optional<My> findById(Long id);
+}
+```
+
+#### Lock Scope
+> 비관적 락은 락 범위 지정이 가능 <br>
+> Join을 해서 사용할 때 메인 테이블에 할지, 모든 테이블의 row에 lock를 걸지 지정 <br>
+> 데이터베이스에서 지원 하는지 확인후 사용 필요
+```java
+public interface MyRepository extends JpaRepository<My, Long> {
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @QueryHints({@QueryHint(name="javax.persistence.lock.scope", value="EXTENDED")})
+    Optional<My> findById(Long id);
+}
+```
