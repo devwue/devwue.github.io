@@ -7,7 +7,7 @@
     "build": "cp -f .env.production .env && vue-cli-service build && cd docs && cp index.html 404.html",
     "test:unit": "node_modules/.bin/vue-cli-service test:unit",
     "prod": "serve -s docs -l 8080",
-    "sitemap": "vue-cli-service sitemap"
+    "sitemap": "vue-cli-service sitemap -o public/"
   },
   "dependencies": {
     "@types/marked": "^2.0.0",
