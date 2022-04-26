@@ -71,7 +71,7 @@
   },
   {
     "Name" : "SpringBoot Async 비동기 설정",
-    "Page" : "/SpringBoot/Async.md",
+    "Page" : "/SpringBoot/Annotation/Async.md",
     "Tags": "spring boot, async, task executor, 스프링 부트"
   },
   {

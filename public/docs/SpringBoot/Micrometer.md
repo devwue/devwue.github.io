@@ -189,3 +189,6 @@ Counter counter = registry.counter("page.visitors", "age", "20s");
 ```java
 new LogbackMetrics().bind(registry);
 ```
+
+### 참조
+* https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-core/src/main/java/io/micrometer/core/instrument/binder/jvm/ExecutorServiceMetrics.java

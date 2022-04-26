@@ -3,7 +3,9 @@
 * Bean Validation 은 명세일 뿐 실제 코드가 아님.
 
 > @Valid 을 붙여야 실제 동작  
+* @Size
 * @Length
+  * Hibernate 의 @Size 어노테이션
 * @NotBlank
 * @NotNull
 * @AssertTrue, @AssertFalse

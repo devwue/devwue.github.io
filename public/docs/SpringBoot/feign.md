@@ -26,7 +26,7 @@ feign:
     enabled: true # enable okhttp
   client:
     config:
-      default:
+      default: # @FeignClient default, 분리해서 사용시 customName 으로 추가
         max-connections: 200 # default 200
         max-connections-per-route: 50 # default: 50
         connection-timeout: 2000 # default: 2000/ms
@@ -57,9 +57,13 @@ public class FeignCustomConfig {
                 .query("trackId", UUID.randomUUID().toString());
     }
 }
-@FeignClient(name="myClient", url = "${my.api.url}")
+@FeignClient(name="myClient", url = "${my.api.url}", configuration = FeignCustomConfig.class)
 public interface MyFeignClient {
     @RequestMapping(method = RequestMethod.GET, value = "/test/uri/{testId}")
     List<String> getSearchLogs(@PathVariable("testId") Integer testId);
+    
+    // form 전송도 가능..
+    @PostMapping(value = "/form/submit", consumes = "application/x-www-form-urlencoded", produces = "application/json")
+    String submitForm(@RequestBody TestParam param);
 }
 ````
