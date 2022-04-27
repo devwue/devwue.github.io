@@ -2,12 +2,30 @@
 > 여기서는 annotation
 * Bean Validation 은 명세일 뿐 실제 코드가 아님.
 
+### Annotation ...
 > @Valid 을 붙여야 실제 동작  
-* @Size
+* @DecimalMax(value=, inclusive=) : value로 설정한 값보다 작은지 확인 (inclusive가 true이면 value 값도 인정)
+* @DecimalMin(value=, inclusive=) : value로 설정한 값보다 큰지 확인 (inclusive가 true이면 value 값도 인정)
+* @Digits(integer=, fraction=) : 정해진 자릿수 이하인지 확인 (integer는 허용 가능한 정수 자릿수, fraction은 허용 가능한 소수점 이하 자릿수)
+* @Email : 이메일 형식인지 확인
+* @Future : 해당 시간이 미래인지 확인
+* @FutureOrPresent : 해당 시간이 현재 또는 미래인지 확인
+* @Max(value=) : 설정한 값보다 작은지 확인
+* @Min(value=) : 설정한 값보다 큰지 확인
+* @NotBlank : null이 아니고 한 개 이상의 문자를 포함하는지 확인(공백 제외)
+* @NotEmpty : null이 아니고 한 개 이상의 문자를 포함하는지 확인(공백 포함)
+* @Negative : 음수인지 확인
+* @NegativeOrZero : 음수이거나 0인지 확인
+* @Null : null인지 확인
+* @Past : 해당 시간이 과거인지 확인
+* @PastOrPresent : 해당 시간이 현재 또는 과거인지 확인
+* @Positive : 양수인지 확인
+* @PositiveOrZero : 양수이거나 0인지 확인
+* @Size(min=, max=) : 해당 범위의 값인지 확인(max, min 값 포함)
 * @Length
   * Hibernate 의 @Size 어노테이션
 * @NotBlank
-* @NotNull
+* @NotNull : null이 아닌지 확인
 * @AssertTrue, @AssertFalse
   ```java
   public class MemberRequest {
@@ -18,7 +36,7 @@
       }
   }
   ```
-* @Pattern
+* @Pattern(regex=, flags=) : 해당 정규식을 만족하는지 확인
   ````java
   public class MemberRequest {
       @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$", message = "전화번호 형식")
