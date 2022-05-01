@@ -47,6 +47,9 @@ public class AsyncConfig extends AsyncConfigurerSupport {
 ```java
 @Slf4j
 public class MyService {
+    @Autowired 
+    private ThreadPoolTaskExecutor myTaskExecutor;
+    
     @Async
     public void asyncMethod(int i) { // 비동기 메소드는 별도 클래스에..
         try {
@@ -56,8 +59,22 @@ public class MyService {
             e.printStackTrace();
         }
     }
+    
+    @Async("myTaskExecutor")
+    public CompletableFuture ifReturn() {
+        return CompletableFuture.supplyAsync(() -> {
+            return "hello";
+        });
+    }
+
+    public CompletableFuture<T> ifReturnAsync() {
+        return CompletableFuture.supplyAsync(() -> {
+            return "world";
+        }, myTaskExecutor);
+    }
 }
 public class AsyncController {
+    @Autowired
     private MyService myService; 
     
     @GetMapping("/async")

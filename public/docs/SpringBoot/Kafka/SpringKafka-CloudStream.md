@@ -53,6 +53,23 @@ dependencies {
     implementation 'io.confluent:kafka-avro-serializer:5.2.1'
     implementation 'org.apache.avro:avro:1.8.2'
 }
+
+def avroResourceDir = "${rootDir}/src/main/avro"
+task makeAvroDir() {
+  if (!new File(avroResourceDir).exists()) {
+    mkdir avroResourceDir
+  }
+}
+task downloadAvro() {
+  src "https://schema-registry-domain/target.avsc";
+  dest avroResourceDir
+  dependsOn makeAvroDir
+}
+task buildWithAvro() {
+  downloadAvro.mustRunAfter clean
+  build.mustRunAfter downloadAvro
+  dependsOn clean, downloadAvro, build
+}
 ```
 ### Spring Cloud Stream
 Binder 와 Binding 을 통해 미들웨어(Apache Kafka, RabbitMQ, ...)와 통신을 시켜주는 프레임워크
