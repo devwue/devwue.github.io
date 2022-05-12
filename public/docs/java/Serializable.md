@@ -1,5 +1,15 @@
 # Java Serializable
+JVM 메모리에 있는 객체 데이터를 바이트 형태로 변환하는 기술, 시스템 외부로 객체 전달이 필요할 때 직렬화 
+* CSV, JSON, 프로토콜 버퍼 등은 데이터 교환시 많이 사용 되지만, 자바 직렬화 형태의 데이터 교환은 자바 시스템간의 데이터 교환을 위하여 존재
+  * Servlet Session, Cache 등
 
+### JPA Entity 에 Serializable 을 꼭 상속 해야 할까?
+> “JSR 220: Enterprise JavaBeansTM,Version 3.0 Java Persistence API Version 3.0, Final Release May 2, 2006″에 따르면, 다음과 같이 기술하고 있다.
+“If an entity instance is to be passed by value as a detached object (e.g., through a remote interface), the entity class must implement the Serializable interface.”
+
+외부로 전송 하거나, 세션에 기록할 용도가 아니라면 Hibernate 상에서 굳이 필요 없다.
+* 단, 서버가 다중화 되어 있고 클러스터링 하는 환경에서 도메인 객체가 캐시에 저장 된다면 객체가 Serializable 인터페이스를 구현해야 정상적으로 저장/불러 오기가 가능 함.
+  * 어떻게 될지 모르니 미리 하는게 좋다고 해야 할려나?...
 ```java
 public class Book implements Serializable {
     private String bookType;   

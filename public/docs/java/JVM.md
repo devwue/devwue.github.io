@@ -1,7 +1,7 @@
 # Java, JVM
 ### 메모리 구조와 할당
-  | Method Area | Heap Area | Stack Area | PC Registers | Native Method Area |
-  |-----------|------------|--------------| ---- | ---- |
+| Method Area | Heap Area | Stack Area | PC Registers | Native Method Area |
+|-----------|------------|--------------| ---- | ---- |
 * Method Area
     * 읽어온 클래스, 인터페이스 정보 저장
     * 각 클래스, 인터페이스 상수, 메소드 필드와 모든 레퍼런스 
@@ -54,11 +54,17 @@ $ java -server \
     * +UseparallelOldGC, +ParallelGCThreads (Miner, Full GC 쓰레드 개수)
   * CMS GC - 위 보다 개선, GC과정에서 발생되는 시간을 최소화 하는데 초점을 맞춤, 대신 CPU사용량이 위보다 높음
     * +UseConcMarkSweepGC
-  * G1 GC (Garbage First) - 큰 메모리에서 좋은 성능을 내기 힘들었기에, 이를 개선한 GC <br>
+    * Java9에서 Deprecated
+  * G1 GC (Garbage First) - Java7에서 등장, Java9부터 default 큰 메모리에서 좋은 성능을 내기 힘들었기에, 이를 개선한 GC <br>
     큰 Heap 메모리에서 짧은 GC시간을 보장하는데 목적을 둠
     * +UseG1GC
+    * -XX:MaxGCPauseMillis=100 STW 지연시간 튜닝 default 250ms
+  * Z GC - Java11에 포함, Java15에서 Production Ready
+    * 큰 메모리에에서 최적화 (8MB ~ 16TB), 64bit 운영체제에서만 사용 가능
+    * G1GC와는 다르게 STW(Stop-The-World)없이 재배치
 
 #### GC 로그 분석
+jstat 
 ```shell
 -XX:+PrintClassHistogramAfterFullGC 
 -XX:+PrintClassHistogramBeforeFullGC 
@@ -69,4 +75,10 @@ $ java -server \
 -XX:+PrintGCTimeStamps 
 -XX:+PrintHeapAtGC 
 -XX:+PrintReferenceGC 
+-XX:-HeapDumpOnOutOfMemoryError
+-XX:HeapDumpPath=./java_pid<pid>.hprof
 ```
+
+#### 32bit OS 메모리 제한
+* Linux 최대 2G
+* Window 최대 1.5G

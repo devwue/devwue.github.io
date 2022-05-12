@@ -9,7 +9,11 @@
 #### newCachedThreadPool
 * 유기적으로 쓰레드의 숫자가 증가, 감소하는 쓰레드 풀
 #### ForkJoin 의 분할정복 알고리즘
-* 설명이 ...
+* Java 7에서 추가됨, 큰 작업을 작은 단위로 나누워서 배분 작업후 취합
+  * 내부 적으로 inbound queue 처리
+* 인터페이스
+  * RecursiveAction - void
+  * RecursiveTask
 
 ## SpringBoot ThreadPoolTaskExecutor
 * ThreadPoolExecutor + @추가적인 기능제공

@@ -37,10 +37,13 @@ spring:
 
 ### Usage
 #### @Entity class
+@Cacheable 반영 및 Serializable 직렬화 가능 하여야 함.
 ```java
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Book {}
+public class Book extends Serializable {
+    private static final long serialVersionUID = 1L;
+}
 ```
 #### @Repository class
 ```java
