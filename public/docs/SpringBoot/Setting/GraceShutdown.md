@@ -55,12 +55,17 @@ public class TestController {
 #### Spring - ContextClosedEvent
 스프링에서 리소스를 정리하는 핸들러가 존재하지 않기 때문에 아래와 같은 작업 필요
 * Request에서 활용되는 ThreadPool 리소스가 정리될 때까지 기다린 후 종료 하는 로직
+
 ```java
+
 @Slf4j
 public class GracefulShutdown implements ApplicationListener<ContextClosedEvent> {
+    private boolean shutdown;
+
     @Override
     public void onApplicationEvent(ContextClosedEvent event) {
         log.debug("Terminated Signal For Application - {}", event);
+        this.shutdown = true;
         this.connector.pause();
         Executor executor = this.connector.getProtocolHandler().getExecutor();
         if (executor instanceof ThreadPoolExecutor) {
@@ -82,6 +87,10 @@ public class GracefulShutdown implements ApplicationListener<ContextClosedEvent>
             }
         }
     }
+
+    public boolean isShutdown() {
+        return shutdown;
+    }
 }
 
 @SpringBootApplication
@@ -92,6 +101,25 @@ public class MyApplication {
                 .listeners(new ApplicationPidFileWriter("MyApplication.pid"))
                 .build();
         application.run(args);
+    }
+}
+```
+#### With Filter
+연결 종료 요청, 일반적으로 60초, 웹서버의 경우 5분정도 연결 유지를 하기 때문에 필요함.
+```java
+@Component
+public class KeepAliveConnectionAnnouncer extends OncePerRequestFilter {
+    private final GraceShutdown graceShutdown;
+    public KeepAliveConnectionAnnouncer(GraceShutdown graceShutdown) {
+        this.graceShutdown = graceShutdown;
+    }
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain) {
+        if (graceShutdown.isShutdown()) {
+            response.addHeader(HttpHeaders.CONNECTION, "close");
+        }
+        filterChain.doFilter(request, response);
     }
 }
 ```

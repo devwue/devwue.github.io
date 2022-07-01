@@ -53,3 +53,29 @@ class BookRepository {
     findBookByName(String name);
 }
 ```
+
+### 문제해결
+#### Could not Write JSON : Infinite recursion...
+Entity 가 연관관계를 가지고 있을때 연관관계를 정리 해줘야 함
+1. @JsonIgnore
+2. @JsonManagedReference, @JsonBackReference
+   * 부모 Entity의 자식 필드에 @JsonManagedReference, 자식 Entity의 부모필드에  @JsonBackReference
+3. DTO 사용
+
+#### com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of 
+1. @JsonCreator
+2. @ConstructorProperties
+3. lombok 사용중이면 다음 설정 추가
+```properties
+# com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of
+lombok.noargsconstructor.extraprivate = true
+lombok.anyconstructor.addconstructorproperties = true
+```
+
+#### java.io.NotSerializableException
+Serialize 대상이 Serializable 하지 않아 발생..
+* jackson 을 사용하여 json으로 serialize 하고 있다면 필요 없음...
+```java
+class MyClass implements Serializable {
+}
+```
