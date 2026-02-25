@@ -23,7 +23,8 @@ export default class Post extends Vue {
   }
 
   created (): void {
-    const postName = this.$route.params.postName
+    const route = useRoute()
+    const postName = route.params.postName
     const host = process.env.VUE_APP_BASE
     const docsUrl = process.env.VUE_APP_DOCS
     const url = host + docsUrl + '/' + postName
