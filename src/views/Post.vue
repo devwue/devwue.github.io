@@ -23,11 +23,27 @@ export default class Post extends Vue {
   }
 
   created (): void {
-    const postName = this.$route.params.postName
+    const route = useRoute()
+    const postName = route.params.postName
     const host = process.env.VUE_APP_BASE
     const docsUrl = process.env.VUE_APP_DOCS
     const url = host + docsUrl + '/' + postName
     console.log('created', url)
+
+    marked.setOptions({
+      gfm: true,
+      breaks: true
+    })
+    marked.use({
+      renderer: {
+        text(text) {
+          return text.replace(/[“"](.*?)[”"]/g, '<span class="quote">❝$1❞</span>')
+            .replace(/==([^=]+)==/g, '<span class="md-highlight">$1</span>')
+            .replace(/!!(.+)!!/g, '<span class="md-warning">$1</span>')
+            .replace(/@([a-zA-Z0-9_]+)/g, '<span class="md-mention">@$1</span>')
+        }
+      }
+    });
     this.$http.get(url)
         .then((response) => {
           this.contents = marked(response.data)

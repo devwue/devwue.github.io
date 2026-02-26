@@ -18,6 +18,10 @@ export default class About extends Vue {
     const docsUrl = process.env.VUE_APP_DOCS
     const url = host + docsUrl + '/About.md'
 
+    marked.setOptions({
+      gfm: true,
+      breaks: true
+    })
     console.log(url);
     this.$http.get(url)
         .then((response) => {
