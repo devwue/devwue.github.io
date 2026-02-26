@@ -5,10 +5,13 @@ const BASE_URL = "https://devwue.github.io";
 
 const posts = require("../src/post-data.json");
 
+cleanName = function(markdownPage) {
+  return markdownPage.replace(/\.md$/,'')
+}
 const urls = posts.map(post => {
   return `
   <url>
-    <loc>${BASE_URL}/posts${post.Page}</loc>
+    <loc>${BASE_URL}/posts${cleanName(post.Page)}</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`;
