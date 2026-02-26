@@ -16,9 +16,11 @@
 	</div>
 </template>
 <script>
-import { computed, onMounted, ref} from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Paginate from 'vuejs-paginate-next'
-import titles from '../post-data.json'
+import techStory from '../post-data.json'
+import lifeStory from '../life-data.json'
 export default {
 	props: {
 		query: String
@@ -29,18 +31,29 @@ export default {
 	setup (props, context) {
     const currentPage = ref(1)
     const perPage = 10
+    const route = useRoute()
+
+    watch(() => route.path, (newPath) => {
+      currentPage.value = 1
+    })
+
+    const titles = computed(() => {
+      const category = route.meta?.category;
+      return category === 'life' ? lifeStory : techStory;
+    })
 
 		onMounted(() => {
-			console.log('mounted', currentPage)
+			//console.log('BookFilter mounted. Current path:', route.path, 'meta:', route.meta)
 		})
 
 		const filteredTitles = computed(() => {
+			const dataToFilter = Array.isArray(titles.value) ? titles.value : [];
 			if (!props.query) {
-				console.log("Filtered Titles (no query):", titles)
-				return titles
+				//console.log("Filtered Titles (no query):", dataToFilter)
+				return dataToFilter
 			}
-			const result = titles.filter(s => s.Tags.toLowerCase().includes(props.query.toLowerCase()))
-			console.log("Filtered Titles (with query):", result)
+			const result = dataToFilter.filter(s => s.Tags && s.Tags.toLowerCase().includes(props.query.toLowerCase()))
+			//console.log("Filtered Titles (with query):", result)
 			return result
 		})
 

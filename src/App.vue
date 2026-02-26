@@ -1,6 +1,9 @@
+<script setup lang="ts">
+</script>
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">IT 개발</router-link> |
+    <router-link to="/daily">일상 생활</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <div id="content">

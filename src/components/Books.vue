@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2> 포스팅 검색 </h2>
-    <input type='text' placeholder='Filter Search' v-model='query' /><button @click='reset'> Reset </button>
+    <input type='text' placeholder='Filter Search' v-model='query' />
+    <button @click='reset'> 전체 </button>
     <book-filter :query='query'/>
   </div>
 </template>
@@ -19,7 +20,7 @@
       const reset = (evt) => {
         query.value = ''
       }
-      
+
       return {
         reset,
         query
