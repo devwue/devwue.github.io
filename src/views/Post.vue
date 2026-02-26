@@ -31,7 +31,7 @@ export default class Post extends Vue {
     const postName = computed(() => route.params.postName as string)
     const host = process.env.VUE_APP_BASE
     const docsUrl = process.env.VUE_APP_DOCS
-    const url = host + docsUrl + '/' + postName.value
+    const url = host + docsUrl + '/' + postName.value + '.md'
     console.log('created', url, postName.value)
 
     const posts = [

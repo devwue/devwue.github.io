@@ -3,7 +3,7 @@
 		<p> Showing {{ filteredTitles.length }} results for "{{ query }}" </p>
 		<ul>
 			<li v-for='title in paginatedTitles' :key='title.Page'>
-        <a :href="'/posts' + title.Page">{{ title.Name }}</a>
+        <a :href="'/posts' + cleanName(title.Page)">{{ title.Name }}</a>
 			</li>
 		</ul>
     <paginate
@@ -27,6 +27,11 @@ export default {
 	},
   components: {
     Paginate
+  },
+  methods: {
+    cleanName(markdownName) {
+      return markdownName.replace(/\.md$/,'')
+    }
   },
 	setup (props, context) {
     const currentPage = ref(1)

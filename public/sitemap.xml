@@ -10,192 +10,192 @@
   </url>
   
   <url>
-    <loc>https://devwue.github.io/posts/etc/brew.md</loc>
+    <loc>https://devwue.github.io/posts/etc/brew</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/aws/Beanstalk.md</loc>
+    <loc>https://devwue.github.io/posts/aws/Beanstalk</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Query/Transactional.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Query/Transactional</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/laravel/logging.md</loc>
+    <loc>https://devwue.github.io/posts/laravel/logging</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/feign.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/feign</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/HttpClient.md</loc>
+    <loc>https://devwue.github.io/posts/java/HttpClient</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/redis/Ranking.md</loc>
+    <loc>https://devwue.github.io/posts/redis/Ranking</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/etc/kafka.md</loc>
+    <loc>https://devwue.github.io/posts/etc/kafka</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/laravel/logging-sql.md</loc>
+    <loc>https://devwue.github.io/posts/laravel/logging-sql</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Time.md</loc>
+    <loc>https://devwue.github.io/posts/java/Time</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/ObjectMapper.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/ObjectMapper</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Assert.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Assert</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/TaskDecorator.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/TaskDecorator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Query/JpaMasterSlave.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Query/JpaMasterSlave</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Annotation/Async.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Annotation/Async</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Query/Specification.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Query/Specification</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Query/QueryDsl.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Query/QueryDsl</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Tomcat.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Tomcat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Java8To11.md</loc>
+    <loc>https://devwue.github.io/posts/java/Java8To11</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/JVM.md</loc>
+    <loc>https://devwue.github.io/posts/java/JVM</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/RestTemplate.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/RestTemplate</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Junit.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Junit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Annotation.md</loc>
+    <loc>https://devwue.github.io/posts/java/Annotation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Map.md</loc>
+    <loc>https://devwue.github.io/posts/java/Map</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Queue.md</loc>
+    <loc>https://devwue.github.io/posts/java/Queue</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/java/Stream.md</loc>
+    <loc>https://devwue.github.io/posts/java/Stream</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/Marathon.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/Marathon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/PhoneBook.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/PhoneBook</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/Spy.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/Spy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/BestAlbum.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/BestAlbum</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/Works.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/Works</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Coding/Printer.md</loc>
+    <loc>https://devwue.github.io/posts/Coding/Printer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/Micrometer.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/Micrometer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/SpringBoot/CircuitBreaker.md</loc>
+    <loc>https://devwue.github.io/posts/SpringBoot/CircuitBreaker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/Javascript/vue-sitemap.md</loc>
+    <loc>https://devwue.github.io/posts/Javascript/vue-sitemap</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/algorithm/CircleShift.md</loc>
+    <loc>https://devwue.github.io/posts/algorithm/CircleShift</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/etc/RancherDesktop.md</loc>
+    <loc>https://devwue.github.io/posts/etc/RancherDesktop</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devwue.github.io/posts/laravel/local.md</loc>
+    <loc>https://devwue.github.io/posts/laravel/local</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
