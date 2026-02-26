@@ -7,8 +7,6 @@
 ### JPA Repository
 
 ````java
-import java.awt.print.Pageable;
-
 @Repository
 public interface BbsJpaRepository extends JpaRepository<Bbs, Long> {
     List<Bbs> findAll(Specification spec, Pageable pageable);
@@ -17,13 +15,18 @@ public interface BbsJpaRepository extends JpaRepository<Bbs, Long> {
 ### QueryDsl Repository
 
 ```java
-import org.springframework.data.domain.Pageable;
-
-public class BbsQueryDslRepository {
-    private final JPAQueryFactory jpaQueryFactory;
-
-    public BbsRepository(EntityManager entityManager) {
-        this.jpaQueryFactory = new JPAQueryFactory(entityManager);
+public interface BbsRepository {
+    List<Bbs> findAll(SearchRequest request, Pageable pageable);
+}
+public class BbsQueryDslRepositoryImpl extends QuerydslRepositorySupport implements BbsRepository{
+    public BbsRepository() {
+        super(Bbs.class);
+    }
+    
+    @PersistenceContext(unitName = "entityManager") // 여러개 사용중이라면...
+    @Override
+    public void setEntityManager(EntityManager entityManager) {
+        super.setEntityManager(entityManager);
     }
 
     public List<Bbs> findAll(SearchRequest request, Pageable pageable) {
@@ -53,7 +56,7 @@ public class BbsQueryDslRepository {
                 .execute();
     }
 
-    private <T> BooleanExpression eq(T value, Function<T, BooleanExpression> function) {
+    private <T> BooleanExpression condition(T value, Function<T, BooleanExpression> function) {
         return Optional.ofNullable(value)
                 .map(function)
                 .orElse(null);
@@ -79,3 +82,7 @@ public class BbsQueryDslRepository {
   * JPA는 더티체킹(변경감지)으로 Update 발생
   * QueryDsl로 벌크 업데이시 영속성 컨텍스트를 무시하고 쿼리 날리기 때문에, 같은 트랜잭션에서 select 할때 영속성 컨텍스트의 값을 조회하게 됨.
     * 벌크 작업후 em.flush(), em.clear()를 통해 영속성 컨텍스트를 초기화 하면 해
+
+### 참고
+* https://docs.spring.io/spring-data/jpa/docs/2.1.3.RELEASE/reference/html/#repositories.custom-implementations
+  * SpringDataJPA의 Custom Repository 구현체의 이름은 `-Impl`로 끝나야 한다
