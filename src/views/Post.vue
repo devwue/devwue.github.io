@@ -8,7 +8,11 @@
 /* tslint:disabled */
 import { Options, PropOptions, Vue } from 'vue-class-component'
 import { useRoute } from 'vue-router'
+import {computed} from "vue";
+import { useHead } from '@vueuse/head'
 import marked from "marked"
+import techStory from '@/post-data.json'
+import lifeStory from '@/life-data.json'
 
 
 export default class Post extends Vue {
@@ -24,11 +28,27 @@ export default class Post extends Vue {
 
   created (): void {
     const route = useRoute()
-    const postName = route.params.postName
+    const postName = computed(() => route.params.postName as string)
     const host = process.env.VUE_APP_BASE
     const docsUrl = process.env.VUE_APP_DOCS
-    const url = host + docsUrl + '/' + postName
-    console.log('created', url)
+    const url = host + docsUrl + '/' + postName.value
+    console.log('created', url, postName.value)
+
+    const posts = [
+      ...techStory,
+      ...lifeStory,
+    ]
+    // console.log(posts.value)
+
+    const item = computed(() => {
+      return posts.find(p => p.Page.endsWith(postName.value))
+    })
+    // console.log('item: ',item.value.Name)
+
+    useHead(() => ({
+      title: item.value ? item.value.Name : '은퇴한 IT개발자의 블로그',
+      meta: [ {name: 'description', content: item.value?.Name ?? '은퇴한 IT개발자의 블로그'} ]
+    }))
 
     marked.setOptions({
       gfm: true,
