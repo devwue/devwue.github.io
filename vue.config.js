@@ -20,6 +20,9 @@ module.exports = {
         }
     },configureWebpack: config => {
     if (process.env.NODE_ENV === "production") {
+      cleanName = function(markdownPage) {
+        return markdownPage.replace(/\.md$/,'')
+      }
       return {
         plugins: [
           new PrerenderSPAPlugin({
@@ -27,8 +30,8 @@ module.exports = {
             routes: [
               "/",
               "/about",
-              ...posts.map(p => `/posts/${p.Page}`),
-              ...daily.map(d => `/daily/${d.Page}`)
+              ...posts.map(p => `/posts/${cleanName(p.Page)}`),
+              ...daily.map(p => `/daily/${cleanName(p.Page)}`)
             ],
           })
         ]
