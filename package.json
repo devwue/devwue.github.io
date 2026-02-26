@@ -13,6 +13,7 @@
     "@types/marked": "^2.0.0",
     "axios": "^1.13.5",
     "editorconfig": "^3.0.1",
+    "github-markdown-css": "^5.9.0",
     "http-proxy-middleware": "^2.0.9",
     "marked": "^2.0.1",
     "vue": "^3.0.0",

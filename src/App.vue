@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import 'github-markdown-css/github-markdown.css'
 </script>
 <template>
   <div id="nav">
@@ -42,5 +43,47 @@
 #foobar { clear: both; border-top: 1px solid #ccc; overflow: hidden; }
 #foobar p { margin: 15px 0 }
 .markdown-body { text-align: left; }
-@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css";
+.markdown-body .quote {
+  color: #d6336c;
+  font-weight: bold;
+  background: rgba(214, 51, 108, 0.08);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.md-highlight {
+  background: #fff3bf;
+  color: #5f3dc4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.md-warning {
+  background: #ffe3e3;
+  color: #c92a2a;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.md-mention {
+  background: #e7f5ff;
+  color: #1971c2;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.md-quote {
+  color: #845ef7;
+  background: rgba(132, 94, 247, 0.08);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* 취소선 */
+del {
+  color: #adb5bd;
+  text-decoration-color: #ff6b6b;
+  text-decoration-thickness: 2px;
+}
 </style>
