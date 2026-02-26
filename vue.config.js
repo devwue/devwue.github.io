@@ -11,14 +11,7 @@ module.exports = {
     devServer: {
         port: process.env.VUE_APP_PORT || 8080
     },
-    pluginOptions: {
-        sitemap: {
-            urls: [
-                'https://devwue.github.io/home',
-                'https://devwue.github.io/about',
-            ]
-        }
-    },configureWebpack: config => {
+    configureWebpack: config => {
     if (process.env.NODE_ENV === "production") {
       cleanName = function(markdownPage) {
         return markdownPage.replace(/\.md$/,'')
@@ -30,8 +23,9 @@ module.exports = {
             routes: [
               "/",
               "/about",
-              ...posts.map(p => `/posts/${cleanName(p.Page)}`),
-              ...daily.map(p => `/daily/${cleanName(p.Page)}`)
+              "/daily",
+              // ...posts.map(p => `/posts/${cleanName(p.Page)}`),
+              // ...daily.map(p => `/daily/${cleanName(p.Page)}`)
             ],
           })
         ]
