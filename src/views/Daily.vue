@@ -1,4 +1,7 @@
 <template>
+  <div id="sub-nav">
+    <router-link to="/daily/map">핫플레이스</router-link>
+  </div>
   <div class="home">
     <Books/>
   </div>
@@ -19,3 +22,19 @@ export default class Daily extends Vue {
   }
 }
 </script>
+
+<style scoped>
+
+#sub-nav {
+  padding: 0 0 30px;
+}
+
+#sub-nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#sub-nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
