@@ -17,6 +17,12 @@ const routes: RouteRecordRaw[] = [
     meta: { category: 'life' },
   },
   {
+    path: '/daily/map',
+    name: 'DailyMap',
+    component: () => import('../views/DailyMap.vue'),
+    meta: { category: 'life' },
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')

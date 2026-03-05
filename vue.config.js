@@ -24,6 +24,7 @@ module.exports = {
               "/",
               "/about",
               "/daily",
+              "/daily/map",
               // ...posts.map(p => `/posts/${cleanName(p.Page)}`),
               // ...daily.map(p => `/daily/${cleanName(p.Page)}`)
             ],
