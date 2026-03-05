@@ -16,7 +16,7 @@
     "editorconfig": "^3.0.1",
     "github-markdown-css": "^5.9.0",
     "http-proxy-middleware": "^2.0.9",
-    "marked": "^2.0.1",
+    "marked": "^4.0.10",
     "vue": "^3.0.0",
     "vue-axios": "^3.2.4",
     "vue-class-component": "^8.0.0-0",
