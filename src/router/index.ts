@@ -18,8 +18,8 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/daily/map',
-    name: 'DailyMap',
-    component: () => import('../views/DailyMap.vue'),
+    name: 'HomeTown',
+    component: () => import('../views/HomeTown.vue'),
     meta: { category: 'life' },
   },
   {

@@ -6,14 +6,18 @@
 
 <script lang="ts">
 /* tslint:disabled */
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 import marked from "marked"
 
-export default class About extends Vue {
-  public profile: string = ''
-  private profileRaw: string = ''
-
-  created (): void {
+export default defineComponent({
+  name: 'About',
+  data() {
+    return {
+      profile: '',
+      profileRaw: ''
+    }
+  },
+  created() {
     const host = process.env.VUE_APP_BASE
     const docsUrl = process.env.VUE_APP_DOCS
     const url = host + docsUrl + '/About.md'
@@ -24,17 +28,16 @@ export default class About extends Vue {
     })
     console.log(url);
     this.$http.get(url)
-        .then((response) => {
+        .then((response: any) => {
           this.profileRaw = response.data;
           this.profile = marked(this.profileRaw)
         });
-  }
-
-  mounted () : void {
+  },
+  mounted() {
     console.log('mounted', 'init')
     if (this.profileRaw) {
       console.log('mounted', 'procc')
     }
   }
-}
+})
 </script>
