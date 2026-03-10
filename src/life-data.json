@@ -1,8 +1,14 @@
 [
   {
+    "Name": "오늘은 도서관이 쉬는날",
+    "Page": "/Life/diary0310.md",
+    "Tags": "은퇴, 사직",
+    "createdAt": "2026-03-10"
+  },
+  {
     "Name": "IT 개발자 삶에 대한 은퇴 선언",
     "Page": "/Life/Retirement.md",
-    "Tags": "은퇴, 사직",
+    "Tags": "은퇴, 사직, 새로운 시작",
     "createdAt": "2026-02-05"
   }
 ]

@@ -1,5 +1,6 @@
 {
   "name": "devwue.io",
+  "description": "은퇴한 IT개발자의 블로그",
   "version": "0.2.0",
   "private": true,
   "scripts": {
