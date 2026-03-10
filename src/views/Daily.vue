@@ -8,19 +8,18 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 import Books from '@/components/Books.vue'
 
-@Options({
+export default defineComponent({
+  name: 'Daily',
   components: {
     Books
-  }
-})
-export default class Daily extends Vue {
-  mounted() : void {
+  },
+  mounted() {
     console.log('home mounted')
   }
-}
+})
 </script>
 
 <style scoped>

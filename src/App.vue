@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import 'github-markdown-css/github-markdown.css'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: '은퇴한 IT개발자의 블로그',
+  meta: [
+    { name: 'description', content: '은퇴한 IT개발자의 블로그입니다.' },
+    { property: 'og:title', content: '은퇴한 IT개발자의 블로그' },
+    { property: 'og:description', content: '은퇴한 IT개발자의 블로그입니다.' },
+  ]
+})
 </script>
 <template>
   <div id="nav">

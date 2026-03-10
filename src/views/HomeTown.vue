@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <Books/>
+  <div class="homeTown">
+    <DailyMap />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Books from '@/components/Books.vue'
+import DailyMap from '@/components/DailyMap.vue'
 
 export default defineComponent({
-  name: 'Home',
+  name: 'HomeTown',
   components: {
-    Books
+    DailyMap
   },
   mounted() {
     console.log('home mounted')
