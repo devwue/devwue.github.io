@@ -13,7 +13,7 @@
   "dependencies": {
     "@types/marked": "^2.0.0",
     "@vueuse/head": "^2.0.0",
-    "axios": "^1.13.5",
+    "axios": "^1.15.0",
     "editorconfig": "^3.0.1",
     "github-markdown-css": "^5.9.0",
     "http-proxy-middleware": "^2.0.9",
